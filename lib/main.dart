@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tv_shows_bloc_app/ui/screens/home_screen.dart';
+import 'package:tv_shows_bloc_app/ui/screens/popular_tv_show_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
-      home: HomeScreen(),
+      home: PopularTvShowsScreen(),
     );
   }
 }

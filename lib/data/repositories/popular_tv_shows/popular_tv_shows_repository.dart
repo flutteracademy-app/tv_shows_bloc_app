@@ -12,7 +12,6 @@ class PopularTvShowsRepository {
       final body = bodyResp.body;
       final PopularTvShowsModel popularTvShowsModel =
           PopularTvShowsModel.fromJson(jsonDecode(body));
-      print(popularTvShowsModel.tv_shows!.first.id);
 
       return popularTvShowsModel;
     } catch (e) {
