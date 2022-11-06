@@ -5,16 +5,18 @@ import 'package:tv_shows_bloc_app/models/popular_tv_shows_model.dart';
 import 'package:tv_shows_bloc_app/ui/screens/utils/models.utils.dart';
 
 class PopularTvShowsCubit extends Cubit<PopularTvShowsState> {
-  PopularTvShowsCubit() : super(const PopularTvShowsState()) {
-    _getPopularTvShows();
+  final int page;
+  PopularTvShowsCubit({required this.page})
+      : super(const PopularTvShowsState()) {
+    _getPopularTvShows(page);
   }
 
-  _getPopularTvShows() async {
+  _getPopularTvShows(int page) async {
     emit(state.copyWith(status: StatusModel.LOADING));
 
     try {
       PopularTvShowsModel popularTvShowsModel =
-          await PopularTvShowsRepository().popularTvShows(1);
+          await PopularTvShowsRepository().popularTvShows(page);
 
       emit(state.copyWith(
         status: StatusModel.SUCCESS,
