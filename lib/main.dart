@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tv_shows_bloc_app/ui/screens/popular_tv_show_screen.dart';
+import 'package:tv_shows_bloc_app/ui/screens/routes/app_routes.dart';
 
 void main() => runApp(const MyApp());
 
@@ -8,9 +8,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Material App',
-      home: PopularTvShowsScreen(),
+      // home: PopularTvShowsScreen(),
+      routerConfig: router,
     );
   }
 }

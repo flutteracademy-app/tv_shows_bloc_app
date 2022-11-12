@@ -19,7 +19,7 @@ class PopularTvShowsScreen extends StatelessWidget {
                 ? SingleChildScrollView(
                     child: Column(
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           height: 100,
                         ),
                         PopularTvShowsWidget(
