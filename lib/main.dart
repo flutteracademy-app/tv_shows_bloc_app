@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tv_shows_bloc_app/ui/screens/routes/app_routes.dart';
+import 'package:tv_shows_bloc_app/routes/app_routes.dart';
 
 void main() => runApp(const MyApp());
 

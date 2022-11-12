@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:tv_shows_bloc_app/models/popular_tv_shows_model.dart';
-import 'package:tv_shows_bloc_app/ui/screens/utils/models.utils.dart';
+import 'package:tv_shows_bloc_app/ui/utils/models.utils.dart';
 
 part 'popular_tv_shows_state.freezed.dart';
 

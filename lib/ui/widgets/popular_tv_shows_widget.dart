@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:tv_shows_bloc_app/models/tv_show_model.dart';
 import 'package:tv_shows_bloc_app/ui/screens/popular_tv_show_details.dart';
-import 'package:tv_shows_bloc_app/ui/screens/routes/app_routes.dart';
+import 'package:tv_shows_bloc_app/routes/app_routes.dart';
 
 class PopularTvShowsWidget extends StatelessWidget {
   final List<TvShowModel> listTvShowModel;
@@ -28,10 +28,12 @@ class PopularTvShowsWidget extends StatelessWidget {
               itemBuilder: (context, index) {
                 return GestureDetector(
                   onTap: () {
-                    context.push(AppRoutes.DETAILS,
-                        extra: PopularTvShowDetailsPageObject(
-                          tvShowModel: listTvShowModel[index],
-                        ));
+                    context.push(
+                      AppRoutes.DETAILS,
+                      extra: PopularTvShowDetailsPageObject(
+                        tvShowModel: listTvShowModel[index],
+                      ),
+                    );
                   },
                   child: Card(
                     child: Container(
